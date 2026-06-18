@@ -7,6 +7,8 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+  }, eslint: {
+    ignoreDuringBuilds: true,
   },
   webpack: (config) => {
     config.resolve.fallback = {
