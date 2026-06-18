@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0891b2;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+/* Selection */
+::selection {
+  background-color: #0891b2;
+  color: white;
+}
+
+/* Utility Classes */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-16 sm:py-20 lg:py-28;
+}
+
+.heading-xl {
+  @apply text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight;
+}
+
+.heading-lg {
+  @apply text-3xl sm:text-4xl font-bold leading-tight;
+}
+
+.heading-md {
+  @apply text-2xl sm:text-3xl font-bold;
+}
+
+.text-body {
+  @apply text-base sm:text-lg leading-relaxed;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-teal-primary hover:bg-teal-bright text-white font-semibold rounded-lg transition-all duration-300 ease-out transform hover:scale-105 active:scale-95;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-teal-primary text-teal-primary hover:bg-teal-primary hover:text-white font-semibold rounded-lg transition-all duration-300;
+}
+
+.btn-secondary-dark {
+  @apply inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-slate-dark text-slate-dark hover:bg-slate-dark hover:text-white font-semibold rounded-lg transition-all duration-300;
+}
+
+.card-hover {
+  @apply transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105;
+}
+
+.gradient-teal {
+  @apply bg-gradient-to-r from-teal-primary to-teal-bright;
+}
+
+.gradient-slate {
+  @apply bg-gradient-to-r from-slate-dark to-slate;
+}
+
+/* Animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(8, 145, 178, 0.7);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(8, 145, 178, 0);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
